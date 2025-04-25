@@ -19,7 +19,7 @@ uvicorn[standard]
 httpx
 
 # Supabase Database Client
-supabase-py
+supabase
 
 # Streamlit Frontend
 streamlit
