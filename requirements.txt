@@ -1,0 +1,36 @@
+# Data Processing
+pandas
+numpy
+
+# Machine Learning / NLP
+scikit-learn
+transformers
+torch
+sentence-transformers
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# FastAPI Backend
+fastapi
+uvicorn[standard]
+httpx
+
+# Supabase Database Client
+supabase-py
+
+# Streamlit Frontend
+streamlit
+
+# Config & Schema Management
+python-dotenv
+pydantic
+
+# Jupyter Notebooks (for development and testing)
+jupyter
+ipykernel
+
+# Optional: Faster JSON parsing (used in FastAPI sometimes)
+orjson
