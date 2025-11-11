@@ -52,5 +52,10 @@ def hospital_operational_insights(df, quarter_start, quarter_end, top_n=5):
 
     return result
 
-
-
+insights = hospital_operational_insights(df, "2023-01-01", "2025-03-31")
+supabase.table("operational_insights").upsert({
+    "quarter": insights["Quarter"],
+    "top_diagnoses": insights["Top Diagnoses"],
+    "top_procedures": insights["Top Procedures"],
+    "total_active_patients": insights["Total Active Patients"]
+}).execute()
