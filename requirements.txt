@@ -8,6 +8,8 @@ transformers
 torch
 sentence-transformers
 accelerate
+statsmodels
+torch
 
 # Visualization
 matplotlib
@@ -35,3 +37,4 @@ ipykernel
 
 # Optional: Faster JSON parsing (used in FastAPI sometimes)
 orjson
+faiss-cpu
