@@ -16,8 +16,6 @@ FILE_NAME = "combined_output_brotli_2.parquet"
 response = supabase.storage.from_(supabase_bucket).download(FILE_NAME)
 df = pd.read_parquet(io.BytesIO(response))
 
-import pandas as pd
-
 def hospital_operational_insights(df, quarter_start, quarter_end, top_n=5):
     # Convert dates
     df["enroll_date_start"] = pd.to_datetime(df["enroll_date_start"])
