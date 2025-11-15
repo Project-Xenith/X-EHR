@@ -83,9 +83,12 @@ def train_model(member_df: pd.DataFrame):
     num_features = ['age', 'tenure_days', 'claim_count', 'has_hospital', 'has_er',
                     'has_pharmacy', 'has_chronic', 'avg_claim_intensity']
 
-    X = member_df[cat_features + num_features].copy()
-    X = pd.get_dummies(X, columns=cat_features, drop_first=True)
-    y = member_df['pmpm_allowed']
+    model_data = member_df[cat_features + num_features + ['pmpm_allowed']].copy()
+    model_data = model_data.apply(pd.to_numeric, errors='coerce')
+    model_data = pd.get_dummies(model_data, columns=cat_features, drop_first=True)
+
+    X = model_data.drop('pmpm_allowed', axis=1).astype(float)
+    y = model_data['pmpm_allowed'].astype(float)
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     X_train_const = sm.add_constant(X_train)
