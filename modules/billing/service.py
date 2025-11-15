@@ -1,4 +1,3 @@
-# modules/billing/service.py
 from typing import List, Tuple, Dict
 import pandas as pd
 from core.database import load_ehr_data
