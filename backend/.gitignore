@@ -1,0 +1,43 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb~ 
+
+# Streamlit
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# FastAPI / Fly.io / Supabase
+.env
+.env.*
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node modules (in case any frontend package is used)
+node_modules/
+
+# Database
+supabase/.temp/
+
+# Misc
+*.sqlite3
+*.db
